@@ -9,15 +9,6 @@ export function Task(id: number) {
   const tarefa = listTasks.find((tarefa, index) => index === id);
   const [newTaskDescription, setNewTaskDescription] = useState("");
   
-  const handleAddTask = () => {
-    if (newTaskDescription.trim() !== "") {
-      setListTasks((prevList) => [
-        ...prevList,
-        { description: newTaskDescription, status: false }
-      ]);
-      setNewTaskDescription("");  // Limpa a descrição da nova tarefa após adicionar
-    }
-  };
 
 
     return (
